@@ -1,0 +1,161 @@
+[gd_resource type="Theme" load_steps=22 format=3 uid="uid://ctbyohvp4vw0r"]
+
+[ext_resource type="Texture2D" uid="uid://bu175fd4sbtdg" path="res://assets/ui/ui.png" id="1_0vn8n"]
+[ext_resource type="FontFile" uid="uid://07hwjw08shf0" path="res://resources/theme/Rockboxcond12.ttf" id="1_eh01k"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xehbd"]
+texture = ExtResource("1_0vn8n")
+texture_margin_left = 1.35131
+texture_margin_top = 0.945914
+texture_margin_right = 1.08104
+texture_margin_bottom = 1.21617
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+region_rect = Rect2(18.0192, 2.1881, 12.0266, 11.8915)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7fkwg"]
+load_path = "res://.godot/imported/ui.png-18543ef61e2d0147d509ac18b5e095b1.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_38c63"]
+texture = SubResource("CompressedTexture2D_7fkwg")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+region_rect = Rect2(18, 2, 12, 12)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j0uga"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lgqin"]
+load_path = "res://.godot/imported/ui.png-18543ef61e2d0147d509ac18b5e095b1.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8bik5"]
+texture = SubResource("CompressedTexture2D_lgqin")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(20, 20, 8, 8)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ci2aj"]
+texture = ExtResource("1_0vn8n")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(4, 20, 8, 8)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f761d"]
+texture = ExtResource("1_0vn8n")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(4, 20, 8, 8)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gnhvl"]
+size = Vector2(0, 0)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_mp6ix"]
+size = Vector2(0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4hpht"]
+bg_color = Color(0.458824, 0.890196, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i0b4c"]
+bg_color = Color(0.458824, 0.890196, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_twu6t"]
+content_margin_left = 2.0
+content_margin_top = 5.0
+content_margin_right = 2.0
+content_margin_bottom = 5.0
+bg_color = Color(0.247059, 0.14902, 0.192157, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pyafg"]
+texture = ExtResource("1_0vn8n")
+texture_margin_left = 4.0
+texture_margin_top = 13.0
+texture_margin_right = 4.0
+texture_margin_bottom = 10.0
+region_rect = Rect2(0, 0, 16, 16)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tblxy"]
+bg_color = Color(0.247059, 0.14902, 0.192157, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bgf52"]
+bg_color = Color(0.996078, 0.682353, 0.203922, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oydws"]
+bg_color = Color(0.996078, 0.682353, 0.203922, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7bp36"]
+bg_color = Color(0.996078, 0.682353, 0.203922, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8s0ry"]
+content_margin_left = 4.0
+content_margin_top = 0.0
+content_margin_right = 4.0
+content_margin_bottom = 0.0
+bg_color = Color(0.247059, 0.14902, 0.192157, 1)
+
+[resource]
+default_font = ExtResource("1_eh01k")
+default_font_size = 16
+AlternatePanelContainer/base_type = &"PanelContainer"
+AlternatePanelContainer/styles/panel = SubResource("StyleBoxTexture_xehbd")
+BlueOutlineLable/base_type = &"Label"
+BlueOutlineLable/colors/font_outline_color = Color(0.14902, 0.168627, 0.266667, 1)
+BlueOutlineLable/colors/font_shadow_color = Color(0.14902, 0.168627, 0.266667, 1)
+BlueOutlineLable/constants/outline_size = 8
+BlueOutlineLable/constants/shadow_offset_x = 0
+BlueOutlineLable/constants/shadow_offset_y = 0
+Button/colors/font_color = Color(0.247059, 0.14902, 0.192157, 1)
+Button/colors/font_disabled_color = Color(0.545098, 0.607843, 0.717647, 1)
+Button/colors/font_focus_color = Color(0.247059, 0.14902, 0.192157, 1)
+Button/colors/font_hover_color = Color(0.741176, 0.423529, 0.290196, 1)
+Button/colors/font_pressed_color = Color(0.247059, 0.14902, 0.192157, 1)
+Button/styles/disabled = SubResource("StyleBoxTexture_38c63")
+Button/styles/focus = SubResource("StyleBoxEmpty_j0uga")
+Button/styles/hover = SubResource("StyleBoxTexture_8bik5")
+Button/styles/normal = SubResource("StyleBoxTexture_ci2aj")
+Button/styles/pressed = SubResource("StyleBoxTexture_f761d")
+HSlider/icons/grabber = SubResource("PlaceholderTexture2D_gnhvl")
+HSlider/icons/grabber_highlight = SubResource("PlaceholderTexture2D_mp6ix")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_4hpht")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_i0b4c")
+HSlider/styles/slider = SubResource("StyleBoxFlat_twu6t")
+Label/constants/line_spacing = 0
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_pyafg")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_tblxy")
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_bgf52")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_oydws")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_7bp36")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_8s0ry")

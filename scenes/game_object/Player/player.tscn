@@ -1,0 +1,177 @@
+[gd_scene load_steps=18 format=3 uid="uid://b1cvyu8je6wrc"]
+
+[ext_resource type="Script" path="res://scenes/game_object/Player/player.gd" id="1_f8hce"]
+[ext_resource type="Texture2D" uid="uid://joxq5hfjs2wm" path="res://scenes/game_object/Player/player.png" id="1_o3jkm"]
+[ext_resource type="PackedScene" uid="uid://c32mf2xahj6ul" path="res://scenes/component/heath_component.tscn" id="2_gi070"]
+[ext_resource type="PackedScene" uid="uid://dj8sujlb3rjr6" path="res://scenes/Ability/Sword_Ability_Controller/sword_ability_controller.tscn" id="2_sk2lf"]
+[ext_resource type="PackedScene" uid="uid://ibo4uw74eyvh" path="res://scenes/component/hit_random_audio_player_component.tscn" id="4_thprm"]
+[ext_resource type="AudioStream" uid="uid://d2flcq3rmrwmw" path="res://assets/audio/impactMining_000.ogg" id="5_j5bv7"]
+[ext_resource type="AudioStream" uid="uid://ctl71t8g2rfhn" path="res://assets/audio/impactMining_001.ogg" id="6_ero7x"]
+[ext_resource type="AudioStream" uid="uid://cb4pny0ge8gu7" path="res://assets/audio/impactMining_002.ogg" id="7_sc85k"]
+[ext_resource type="AudioStream" uid="uid://mmhc1fw8xgqa" path="res://assets/audio/impactMining_003.ogg" id="8_l2fcg"]
+[ext_resource type="AudioStream" uid="uid://lmaq33q2lt2d" path="res://assets/audio/impactMining_004.ogg" id="9_gifse"]
+
+[sub_resource type="Animation" id="Animation_gcaf2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("visuals/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("visuals/Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("visuals/Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_qo3kq"]
+resource_name = "walk"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("visuals/Sprite2D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -4), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("visuals/Sprite2D:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.261799, -0.261799, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("visuals/Sprite2D:scale")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3, 0.4),
+"transitions": PackedFloat32Array(0.784584, 2.37841, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 1.1), Vector2(1.2, 0.7), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2cueo"]
+_data = {
+"RESET": SubResource("Animation_gcaf2"),
+"walk": SubResource("Animation_qo3kq")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f85kc"]
+bg_color = Color(0.262745, 0.882353, 0.701961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.247059, 0.14902, 0.192157, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p6e2v"]
+radius = 32.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w7vgy"]
+radius = 7.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mcu1r"]
+radius = 5.0
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+collision_layer = 0
+motion_mode = 1
+script = ExtResource("1_f8hce")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_2cueo")
+}
+
+[node name="HeathComponent" parent="." instance=ExtResource("2_gi070")]
+
+[node name="Abilities" type="Node" parent="."]
+
+[node name="SwordAbilityController" parent="Abilities" instance=ExtResource("2_sk2lf")]
+
+[node name="HitRandomStreamPlayerComponent" parent="." instance=ExtResource("4_thprm")]
+streams = Array[AudioStream]([ExtResource("5_j5bv7"), ExtResource("6_ero7x"), ExtResource("7_sc85k"), ExtResource("8_l2fcg"), ExtResource("9_gifse")])
+
+[node name="DamageIntervalTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(32, 6)
+offset_left = -16.0
+offset_top = -24.0
+offset_right = 16.0
+offset_bottom = -18.0
+pivot_offset = Vector2(16, 3)
+theme_override_styles/fill = SubResource("StyleBoxFlat_f85kc")
+max_value = 1.0
+value = 0.5
+show_percentage = false
+
+[node name="PickupArea2D" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea2D"]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_p6e2v")
+
+[node name="CollisionArea2D" type="Area2D" parent="."]
+position = Vector2(0, -7)
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionArea2D"]
+shape = SubResource("CircleShape2D_w7vgy")
+
+[node name="visuals" type="Node2D" parent="."]
+rotation = 0.00209813
+
+[node name="Sprite2D" type="Sprite2D" parent="visuals"]
+texture = ExtResource("1_o3jkm")
+offset = Vector2(0, -8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_mcu1r")

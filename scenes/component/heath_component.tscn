@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c32mf2xahj6ul"]
+
+[ext_resource type="Script" path="res://scenes/component/heath_component.gd" id="1_3xtka"]
+
+[node name="HeathComponent" type="Node"]
+script = ExtResource("1_3xtka")
